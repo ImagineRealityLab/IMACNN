@@ -18,7 +18,7 @@ for subj_num=1:n_subj
 for sess_num=1:subj_sessions(ss(subj_num))
 
 % Load the subject's data
-% the structure of the timelock the non-timelock
+
 load([data_dir,file_name,num2str(ss(subj_num)),'s',num2str(sess_num),'.mat']);
 
 % Get the raw data from one subject to get info about all channels in the
