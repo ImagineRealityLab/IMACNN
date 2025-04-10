@@ -1,6 +1,6 @@
 # IMACNN
  
-This repository contains the code for the temporal analysis of the project "Using generative AI, CNNs and extensive individual sampling to characterize the visual features encoded in the alpha rhythms during imagery" which Rico conducted during his lab visit in 2025.
+This repository contains the code for the temporal analysis of the project "Using generative AI, CNNs and extensive individual sampling to characterize the visual features encoded in alpha rhythms during imagery" which Rico conducted during his lab visit in 2025.
 
 The analysis pipeline is as follows:
 1. Preprocessing: preprocess_eeg_individual_scene_imagery.m -> fieldtrip_channel_interp_and_downsampling.m  
