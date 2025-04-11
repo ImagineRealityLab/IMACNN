@@ -13,7 +13,7 @@ We first created representational dissimilarity matrices (RDMs) at each time poi
 | 1.1.  | Preprocessing: preprocess_EEG_individual_scene_imagery.m|
 | 1.2.  | Channel interpolation and downsampling: fieldtrip_channel_interp_and_downsampling.m |
 | 2.1.  | EEG RDM creation & mean pairwise decoding: create_rdms_across_time.m     |
-| 2.2.  | DNN RDM creation:      |
+| 2.2.  | DNN RDM creation: create_dnn_rdms.m     |
 | 3.1.  | Conduct statistical test and plot mean pairwise decoding: plot_mean_pairwise_decoding     |
 | 3.2.  | Correlate EEG RDMs with DNN RDMs, run statistical test and plot correlations: plot_dnn_temporal_corr     |
 
