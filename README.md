@@ -15,7 +15,7 @@ We first created representational dissimilarity matrices (RDMs) at each time poi
 | 2.1.  | EEG RDM creation & mean pairwise decoding: create_rdms_across_time.m     |
 | 2.2.  | DNN RDM creation: create_dnn_rdms.m     |
 | 3.1.  | Conduct statistical test and plot mean pairwise decoding: plot_mean_pairwise_decoding     |
-| 3.2.  | Correlate EEG RDMs with DNN RDMs, run statistical test and plot correlations: plot_dnn_temporal_corr     |
+| 3.2.  | Predict EEG RDMs across time with DNN layer RDMs, run statistical test and ridge coefficients: dnn_layer_rdm_ridge_reg.m     |
 
 The preprocessing scripts and EEG RDM creation script require [FieldTrip](https://www.fieldtriptoolbox.org/). The EEG RDM creation script also requires [CosMoMVPA](https://www.cosmomvpa.org/) and the MATLAB [domain adaptation toolbox](https://de.mathworks.com/matlabcentral/fileexchange/56704-a-domain-adaptation-toolbox). The statistical test (threshold free cluster enhancement) in both plotting scripts require the EEG_clusterstats function. The shaded error bars in the plots use the [boundedline function](https://de.mathworks.com/matlabcentral/fileexchange/27485-boundedline-m). The plots are saved using [export_fig](https://de.mathworks.com/matlabcentral/fileexchange/23629-export_fig?s_tid=srchtitle). All scripts were run in MATLAB 2022a.
 
