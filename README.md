@@ -10,7 +10,7 @@ We first created representational dissimilarity matrices (RDMs) at each time poi
 
 |  Step  | Procedure & Script                |
 |-------|-----------------|
-| 1.1.  | Preprocessing: preprocess_EEG_individual_scene_imagery.m|
+| 1.1.  | Preprocessing: preprocess_EEG.m|
 | 1.2.  | Channel interpolation and downsampling: fieldtrip_channel_interp_and_downsampling.m |
 | 2.1.  | EEG RDM creation & mean pairwise decoding: create_rdms_across_time.m     |
 | 2.2.  | DNN RDM creation: create_dnn_rdms.m     |
