@@ -1,6 +1,6 @@
 # IMACNN
  
-This repository contains the code for the temporal analysis of the project "Using generative AI, CNNs and extensive individual sampling to characterize the visual features encoded in alpha rhythms during imagery" which Rico conducted during his lab visit in 2025.
+This repository contains the code for the time-resolved representational similarity analysis (RSA) for the project "Using generative AI, CNNs and extensive individual sampling to characterize the visual features encoded in alpha rhythms during imagery" which Rico Stecher conducted during his lab visit in 2025.
 
 **Task & Analysis**
 
