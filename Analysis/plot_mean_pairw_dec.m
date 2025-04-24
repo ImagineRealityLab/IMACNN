@@ -1,4 +1,4 @@
-%% Housekeeping
+% this plots the mean pairwise decoding across time
 
 clear
 clc
