@@ -32,6 +32,7 @@ clc
 % provide the subject IDs and how many sessions of EEG data each part has
 ss = [2:5, 7:12]; %only include subjects with 10 sessions
 subj_sessions = [1, 10, 10, 10, 10, 4, 10, 10, 10, 10, 10, 10];
+
 n_trials_per_sess = 432;
 n_sess = 10;
 subj_num = 1:length(ss);
