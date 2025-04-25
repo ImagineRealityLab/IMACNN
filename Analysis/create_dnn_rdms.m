@@ -1,5 +1,5 @@
-% This script creates RDMs averaged across all AI-generated image sets for 
-% each DNN layer
+%% Create RDMs averaged across all AI-generated image sets for 
+%% each DNN layer
 
 clc
 clear
@@ -7,18 +7,18 @@ close all
 
 % !! This code assumes the order of the images to follow the Automatic1111
 % format, in which all generated images of a scene are grouped together (so
-% the folder first contains all images of scene one, then all images of
-% scene two... etc.). If you don't do this, the RDMs will not be calculated
+% the folder first contains all images of scene 1, then all images of
+% scene 2... etc.). If you don't do this, the RDMs will not be calculated
 % correctly.
 
-% define directories and parameters
+%% Define parameters, pre-calculate variables and prepare data
+
 img_dir = 'C:\MATLAB\Individual Scene Imagery\Scene Images\high variance set 100 img SD 2 0 cfg 3 no pos prompts\';
 model_dir = 'C:\MATLAB\Individual Scene Imagery\VGG16places_forRico\';
 output_dir = 'C:\MATLAB\Individual Scene Imagery\Results\DNN\';
 n_scenes = 16;
 n_img_sets = 100;
-n_subsets = 4; % if you try to run this on an image set with a different
-% structure, check that these calculations would work for that
+n_subsets = 4; 
 n_layers = 16;
 n_img = n_scenes * n_img_sets;
 n_img_per_subset = n_img / n_subsets;
@@ -64,8 +64,8 @@ end
 % get all possible images
 allImg = dir([img_dir, '*.png']);
 
-% iterate through all layers and subsets and create DNN RDMs for all 
-% image sets in each subset
+%% Iterate through all layers and subsets and create DNN RDMs for all 
+%% image sets in each subset
 
 rdm = zeros(n_layers, n_subsets, n_img_per_subset, n_img_per_subset);
 for layer = 1:length(layer_names)
@@ -107,7 +107,8 @@ for layer = 1:length(layer_names)
 
 end
 
-% average RDMs in each layer, both across image sets and subsets
+%% Average RDMs in each layer across image sets and subsets
+
 idx = repelem(1:n_img_per_scene_per_subset, 1, n_scenes);
 rdm = squeeze(mean(rdm, 2));
 for layer = 1:size(rdm, 1)

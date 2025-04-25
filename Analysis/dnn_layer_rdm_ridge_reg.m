@@ -1,11 +1,12 @@
-% this predicts imagery RDMs at every time point with DNN layer group RDMs
-% using a ridge regression
+%% Predict imagery RDMs at every time point with DNN layer group RDMs
+%% using a ridge regression
 
-clearvars;
-clc;
+clearvars
+clc
 close all
 
-% define parameters
+%% Define parameters and prepare data
+
 ss = [2:5, 7:12];
 subj_num = 1:length(ss);
 
@@ -38,8 +39,8 @@ layer_groups(:, 1) = early_RDM_vec;
 layer_groups(:, 2) = intermediate_RDM_vec;
 layer_groups(:, 3) = FC_RDM_vec;
 
-% predict the imagery RDM of each participant across time
-% with the layer group rdms
+%% Predict the imagery RDM of each participant across time
+%% with the layer group rdms
 
 for s = subj_num
 
@@ -81,7 +82,7 @@ if cfg.use_other_cluster_stat == 1
     cfg.p_uncorrected = 0.005;
 end
 
-% plot the data
+%% Plot the data
 
 for layer_group = 1:size(layer_groups, 2)
 
@@ -162,6 +163,7 @@ for layer_group = 1:size(layer_groups, 2)
     end
 
 end
+
 legend([h(1), h(2), h(3)], 'early layers', 'intermediate layers', 'fully connected layers', 'location', 'eastoutside');
 
 % save the figure using export_fig

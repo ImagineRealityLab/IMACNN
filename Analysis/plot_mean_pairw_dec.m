@@ -1,17 +1,17 @@
-% this plots the mean pairwise decoding across time
+%% Plot the mean pairwise decoding across time
 
 clear
 clc
 close all
 
-%% Define parameters
+%% Define parameters and load data
 
 analysis_color = [91, 50, 86];
 output_dir = 'C:\MATLAB\Individual Scene Imagery\Results\time\Decoding\';
 
 load('D:\UCL Individual Scene Imagery\Results\time\RSA\RDMs_pair_acc_mult_sess_time_train_est_smida_8_comp_05_gamma_001_mu_d_trl_avg_chunk_1_perm_mean_pair_dec');
 
-% conduct TFCE/cluster permutation test at each time point
+%% Conduct TFCE/cluster permutation test at each time point
 
 data = [];
 cfg = [];
@@ -42,6 +42,8 @@ set(0, 'DefaultTextFontname', 'Helvetica')
 set(0, 'DefaultAxesFontSize', 19) 
 set(0, 'DefaultTextFontSize', 22) 
 set(gcf, 'Color', 'w')
+
+% add horizontal and vertical lines
 xline(0, 'k-', 'LineWidth', 2)
 hold on
 h = line([min(dat.time), max(dat.time)], [0.5, 0.5]*100);

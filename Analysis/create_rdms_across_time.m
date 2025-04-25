@@ -23,7 +23,6 @@
 % Note that the CoSMoMVPA functions need FieldTrip(www.fieldtriptoolbox.org/)
 % to run.
 
-%% Housekeeping
 close all
 clear
 clc
@@ -306,7 +305,7 @@ end % subjects
 % save the mean pairwise decoding
 save([output_dir, file_name_prefix, '_', 'mean_pair_dec'], 'RDM_mean_matrix');
 
-%% Plot the results
+%% Plot the mean pairwise decoding
 
 figure();
 set(gcf, 'Color', 'w')

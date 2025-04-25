@@ -9,7 +9,7 @@ clear
 clc
 close all
 
-% define parameters
+%% Define parameters and pre-calculate variables
 
 ss = [2:5 7:12];
 subj_sessions = [1, 10, 10, 10, 10, 4, 10, 10, 10, 10, 10, 10];
@@ -85,7 +85,7 @@ for perm = 1:n_perms
 
 end
 
-% conduct analysis
+%% Conduct analysis
 
 for s = subj_num
 
@@ -347,7 +347,7 @@ for s = subj_num
 
 end
 
-% plot the mean pairwise decoding
+%% Average the bottom triangle
 
 for s = subj_num
 
@@ -358,6 +358,8 @@ for s = subj_num
     end
 
 end
+
+%% Plot the mean pairwise decoding
 
 figure();
 set(gcf, 'Color', 'w')
