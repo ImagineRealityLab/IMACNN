@@ -1,7 +1,7 @@
 %% Predict imagery RDMs at every time point with DNN layer group RDMs
 %% using a ridge regression
 
-clearvars
+clear
 clc
 close all
 
